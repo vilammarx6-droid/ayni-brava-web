@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap');
+
+:root {
+  /* Premium Light Mode Palette */
+  --primary-bg: #FFFFFF;
+  --secondary-bg: #F9FAFB;
+  --primary-navy: #111A46;
+  --primary-navy-light: #1A2768;
+  --accent-terracotta: #C56F4F;
+  --accent-terracotta-light: #E08766;
+  --text-dark: #1F2937;
+  --text-muted: #4B5563;
+  
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(17, 26, 70, 0.05);
+  --glow-shadow: 0 10px 40px rgba(17, 26, 70, 0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* Typography */
+h1, h2, h3, h4 { font-weight: 800; line-height: 1.2; letter-spacing: -0.5px; color: var(--primary-navy); }
+h1 { font-size: 4.5rem; margin-bottom: 1.5rem; }
+h2 { font-size: 3.5rem; margin-bottom: 1.5rem; }
+p { font-size: 1.25rem; margin-bottom: 1.5rem; color: var(--text-muted); }
+
+/* Utilities */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+.section { padding: 8rem 0; position: relative; }
+.text-center { text-align: center; }
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(to right, var(--primary-navy), var(--accent-terracotta));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glassmorphism Classes (Light) */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 1rem 2.5rem;
+  border-radius: 50px; font-weight: 600; font-size: 1.1rem;
+  cursor: pointer; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: none; position: relative; overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-navy), var(--primary-navy-light));
+  color: white;
+  box-shadow: 0 10px 20px rgba(17, 26, 70, 0.15);
+}
+
+.btn-primary:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(17, 26, 70, 0.25);
+}
+
+/* Base animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in { animation: fadeIn 1s ease-out forwards; }

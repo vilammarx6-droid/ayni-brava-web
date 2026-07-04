@@ -1,0 +1,122 @@
+.section-header {
+  margin-bottom: 4rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.about-card {
+  padding: 3rem;
+  position: relative;
+  transition: all 0.3s ease;
+  background: white;
+  border: 1px solid rgba(17, 26, 70, 0.05);
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--glow-shadow);
+  border-color: rgba(197, 111, 79, 0.2);
+}
+
+.icon-glow-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: rgba(197, 111, 79, 0.08);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 15px rgba(197, 111, 79, 0.1);
+}
+
+.card-title {
+  color: var(--primary-navy);
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Image styling */
+.about-image-container {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  border: 5px solid white;
+}
+
+.about-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-image-container:hover img {
+  transform: scale(1.05);
+}
+
+.focus-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.focus-card {
+  padding: 2rem;
+  background: white;
+}
+
+.focus-title {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-navy);
+}
+
+.text-green { color: #25D366; }
+.text-red { color: #E08766; }
+
+.focus-list {
+  list-style: none;
+  padding: 0;
+}
+
+.focus-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--text-muted);
+  font-size: 1.15rem;
+}
+
+.focus-list li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--accent-terracotta);
+  font-weight: bold;
+}
+
+.focus-list strong {
+  color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+}

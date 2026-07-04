@@ -1,0 +1,124 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(17, 26, 70, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-logo {
+  height: 60px;
+  width: auto;
+  /* Dark logo needs no shadow on light bg */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-links a {
+  color: var(--primary-navy);
+  font-weight: 500;
+  font-size: 1.15rem;
+  transition: color 0.2s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-links a:not(.nav-inactive):hover {
+  color: var(--accent-terracotta);
+}
+
+.nav-inactive {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.badge {
+  background: rgba(197, 111, 79, 0.1);
+  color: var(--accent-terracotta);
+  font-size: 0.6rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(197, 111, 79, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-btn {
+  padding: 0.8rem 1.8rem;
+  font-size: 1.1rem;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.dropdown > a {
+  padding: 1.5rem 0; /* Creates hover area without breaking layout */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(17, 26, 70, 0.1);
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid rgba(17, 26, 70, 0.05);
+  animation: fadeInDown 0.3s ease forwards;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-menu a {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.dropdown-menu a:hover {
+  background: rgba(197, 111, 79, 0.05);
+  color: var(--accent-terracotta);
+}
+
+@media (max-width: 768px) {
+  .nav-links, .nav-btn { display: none; }
+}

@@ -1,0 +1,124 @@
+.lead-form-container {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.lead-form-wrapper {
+  background: white;
+  border-radius: 40px;
+  padding: 10px 10px 10px 25px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lead-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #888;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.lead-input-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.country-prefix {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--primary-navy);
+  font-size: 1.1rem;
+  padding-right: 15px;
+  border-right: 1px solid #eee;
+}
+
+.flag {
+  font-size: 1.2rem;
+}
+
+.lead-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  color: var(--primary-navy);
+  font-weight: 500;
+  background: transparent;
+  min-width: 120px;
+}
+
+.lead-input::placeholder {
+  color: #ccc;
+}
+
+.lead-submit-btn {
+  background: linear-gradient(135deg, #FF7B00 0%, #FF5500 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.lead-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 123, 0, 0.4);
+}
+
+.lead-form-success {
+  background: rgba(37, 211, 102, 0.1);
+  border: 1px solid #25D366;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.success-icon {
+  background: #25D366;
+  color: white;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .lead-form-wrapper {
+    padding: 15px;
+    border-radius: 20px;
+  }
+  
+  .lead-input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .country-prefix {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .lead-input {
+    padding: 10px 0;
+  }
+}

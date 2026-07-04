@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "title": "Mando y Tecnología en Chumbivilcas",
+    "subtitle": "Ingeniería, Tecnología e Inteligencia Artificial adaptada a la realidad de Chumbivilcas y Cusco. Protegemos tu capital y optimizamos tu tiempo."
+  },
+  "about": {
+    "mission": "Reducir la carga operativa y mental de profesionales, emprendedores y docentes en entornos locales mediante la aplicación utilitaria de la Inteligencia Artificial. Transformamos la tecnología compleja en soluciones directas que devuelven tiempo libre y eficiencia inmediata.",
+    "vision": "Ser el ecosistema referente en descentralización tecnológica y optimización del trabajo en zonas rurales. Logramos que la Inteligencia Artificial sea una herramienta accesible, económica y funcional que opere incluso sin conexión a internet para eliminar las brechas de conectividad.",
+    "image": "/images/docente.jpeg"
+  },
+  "services": [
+    {
+      "title": "Webs Corporativas y Landing Pages",
+      "description": "Diseñamos sitios profesionales y de alta conversión que proyectan autoridad y captan clientes potenciales de forma automatizada.",
+      "icon": "🌐"
+    },
+    {
+      "title": "Tiendas Online (E-commerce)",
+      "description": "Catálogos digitales autoadministrables con carritos de compra y pasarelas de pago listas para vender tus productos 24/7.",
+      "icon": "🛒"
+    },
+    {
+      "title": "Sistemas de Reserva Automáticos",
+      "description": "Perfecto para turismo y hoteles. Sistemas que sincronizan disponibilidad y pagos sin intervención humana.",
+      "icon": "📅"
+    },
+    {
+      "title": "Diseño Responsivo y SEO Local",
+      "description": "Webs ultra rápidas en celulares y optimizadas a nivel de código para aparecer primero en Google Maps y búsquedas locales.",
+      "icon": "📍"
+    },
+    {
+      "title": "Automatización WhatsApp + IA",
+      "description": "Conectamos tu web a herramientas de inteligencia artificial para responder consultas y agendar clientes vía WhatsApp.",
+      "icon": "🤖"
+    },
+    {
+      "title": "Mantenimiento y Soporte Técnico",
+      "description": "Nos encargamos de los servidores, copias de seguridad y actualizaciones para que tu tecnología nunca se detenga.",
+      "icon": "🔧"
+    }
+  ],
+  "contact": {
+    "title": "¿Listo para optimizar tu negocio?",
+    "description": "Brindamos consultoría técnica gratuita para evaluar la situación digital de tu negocio en Chumbivilcas y Cusco. Habla directamente con nosotros y descubre cómo podemos proteger tu capital.",
+    "whatsappNumber": "51983140402"
+  }
+}
