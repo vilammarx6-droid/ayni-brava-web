@@ -4,11 +4,13 @@ import { Target, Lightbulb } from 'lucide-react';
 import './AboutSection.css';
 import homeDataBackup from '../content/home.json';
 import { useHomeData } from '../sanity/client';
+import { urlFor } from '../sanity/image';
 
 const AboutSection = () => {
   const { data, loading } = useHomeData();
   const mission = data?.aboutMission || homeDataBackup.about.mission;
-  const { vision, image } = homeDataBackup.about;
+  const vision = data?.aboutVision || homeDataBackup.about.vision;
+  const imageUrl = data?.aboutImage ? urlFor(data.aboutImage).url() : homeDataBackup.about.image;
 
   return (
     <section id="about" className="section">
@@ -63,7 +65,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <img src={image} alt="Docentes usando tecnología rural" />
+            <img src={imageUrl} alt="Nosotros - Ayni Brava" />
           </motion.div>
 
           <div className="focus-cards-container">

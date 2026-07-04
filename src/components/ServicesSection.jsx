@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Globe, ShoppingCart, Calendar, Search, Bot, Wrench, BrainCircuit } from 'lucide-react';
 import './ServicesSection.css';
-import homeData from '../content/home.json';
+import homeDataBackup from '../content/home.json';
+import { useHomeData } from '../sanity/client';
 
 // Map icons from strings to Lucide components
 const iconMap = {
@@ -15,7 +16,8 @@ const iconMap = {
 };
 
 const ServicesSection = () => {
-  const servicesData = homeData.services;
+  const { data, loading } = useHomeData();
+  const servicesData = data?.servicesList?.length > 0 ? data.servicesList : homeDataBackup.services;
 
   return (
     <section id="services" className="section">

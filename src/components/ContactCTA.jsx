@@ -7,7 +7,8 @@ import { useHomeData } from '../sanity/client';
 const ContactCTA = () => {
   const { data, loading } = useHomeData();
   const whatsappNumber = data?.whatsappNumber || homeDataBackup.contact.whatsappNumber;
-  const { title, description } = homeDataBackup.contact;
+  const title = data?.contactTitle || homeDataBackup.contact.title;
+  const description = data?.contactDescription || homeDataBackup.contact.description;
 
   return (
     <section id="contact" className="section">
