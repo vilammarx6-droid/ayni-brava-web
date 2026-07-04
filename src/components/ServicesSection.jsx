@@ -29,6 +29,7 @@ const ServicesSection = () => {
           {servicesData.map((service, index) => (
             <motion.div 
               key={index} 
+              id={`service-${index}`}
               className="glass-panel service-card group"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}

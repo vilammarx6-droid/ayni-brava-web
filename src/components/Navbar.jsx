@@ -13,6 +13,19 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToService = (e, id) => {
+    if (window.location.pathname === '/servicios') {
+      e.preventDefault();
+      const el = document.getElementById(id);
+      if (el) {
+        // Adjust scroll position for fixed navbar
+        const y = el.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        setDropdownOpen(false);
+      }
+    }
+  };
+
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
@@ -30,10 +43,10 @@ const Navbar = () => {
             <Link to="/servicios">¿Qué Hacemos? <ChevronDown size={16} /></Link>
             {dropdownOpen && (
               <div className="dropdown-menu">
-                <Link to="/servicios">Webs Corporativas</Link>
-                <Link to="/servicios">Tiendas Online</Link>
-                <Link to="/servicios">Sistemas de Reserva</Link>
-                <Link to="/servicios">SEO Local</Link>
+                <Link to="/servicios#service-0" onClick={(e) => scrollToService(e, 'service-0')}>Webs Corporativas</Link>
+                <Link to="/servicios#service-1" onClick={(e) => scrollToService(e, 'service-1')}>Tiendas Online</Link>
+                <Link to="/servicios#service-2" onClick={(e) => scrollToService(e, 'service-2')}>Sistemas de Reserva</Link>
+                <Link to="/servicios#service-3" onClick={(e) => scrollToService(e, 'service-3')}>SEO Local</Link>
                 <Link to="/nosotros">Misión y Visión</Link>
               </div>
             )}
