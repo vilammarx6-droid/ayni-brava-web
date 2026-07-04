@@ -2,6 +2,11 @@ export default {
   name: 'home',
   title: 'Página de Inicio',
   type: 'document',
+  preview: {
+    prepare() {
+      return { title: 'Ayni Brava - Página de Inicio' }
+    }
+  },
   initialValue: {
     navItems: [
       {
