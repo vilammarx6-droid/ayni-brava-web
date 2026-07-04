@@ -1,10 +1,13 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import './ContactCTA.css';
-import homeData from '../content/home.json';
+import homeDataBackup from '../content/home.json';
+import { useHomeData } from '../sanity/client';
 
 const ContactCTA = () => {
-  const { title, description, whatsappNumber } = homeData.contact;
+  const { data, loading } = useHomeData();
+  const whatsappNumber = data?.whatsappNumber || homeDataBackup.contact.whatsappNumber;
+  const { title, description } = homeDataBackup.contact;
 
   return (
     <section id="contact" className="section">

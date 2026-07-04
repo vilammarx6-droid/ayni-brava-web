@@ -9,27 +9,37 @@ import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-
+import AdminPage from './pages/AdminPage';
 import './App.css';
 
+// Layout component to keep Navbar and Footer together
+function MainLayout({ children }) {
+  return (
+    <div className="app-container">
+      <Navbar />
+      <main>
+        {children}
+      </main>
+      <FloatingWhatsApp />
+      <Footer />
+    </div>
+  );
+}
+
 function App() {
+  // Evitar conflictos entre el Router de Sanity y el Router de la página principal
+  if (window.location.pathname.startsWith('/admin')) {
+    return <AdminPage />;
+  }
+
   return (
     <Router>
-      <div className="app-container">
-        <Navbar />
-        
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/servicios" element={<ServicesPage />} />
-            <Route path="/nosotros" element={<AboutPage />} />
-            <Route path="/contacto" element={<ContactPage />} />
-          </Routes>
-        </main>
-        
-        <FloatingWhatsApp />
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/" element={<MainLayout><HomePage /></MainLayout>} />
+        <Route path="/servicios" element={<MainLayout><ServicesPage /></MainLayout>} />
+        <Route path="/nosotros" element={<MainLayout><AboutPage /></MainLayout>} />
+        <Route path="/contacto" element={<MainLayout><ContactPage /></MainLayout>} />
+      </Routes>
     </Router>
   );
 }

@@ -2,10 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Lightbulb } from 'lucide-react';
 import './AboutSection.css';
-import homeData from '../content/home.json';
+import homeDataBackup from '../content/home.json';
+import { useHomeData } from '../sanity/client';
 
 const AboutSection = () => {
-  const { mission, vision, image } = homeData.about;
+  const { data, loading } = useHomeData();
+  const mission = data?.aboutMission || homeDataBackup.about.mission;
+  const { vision, image } = homeDataBackup.about;
 
   return (
     <section id="about" className="section">

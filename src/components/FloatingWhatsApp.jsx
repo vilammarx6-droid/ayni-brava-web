@@ -1,10 +1,12 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import './FloatingWhatsApp.css';
-import homeData from '../content/home.json';
+import homeDataBackup from '../content/home.json';
+import { useHomeData } from '../sanity/client';
 
 const FloatingWhatsApp = () => {
-  const { whatsappNumber } = homeData.contact;
+  const { data, loading } = useHomeData();
+  const whatsappNumber = data?.whatsappNumber || homeDataBackup.contact.whatsappNumber;
 
   return (
     <a 

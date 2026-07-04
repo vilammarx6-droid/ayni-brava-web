@@ -2,16 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import './HeroSection.css';
 import LeadForm from './LeadForm';
-import homeData from '../content/home.json';
+import homeDataBackup from '../content/home.json';
+import { useHomeData } from '../sanity/client';
 
 const HeroSection = () => {
-  const { title, subtitle } = homeData.hero;
+  const { data, loading } = useHomeData();
   const [typedText, setTypedText] = useState('');
+
+  const title = data?.heroTitle || homeDataBackup.hero.title;
+  const subtitle = data?.heroSubtitle || homeDataBackup.hero.subtitle;
 
   // AI Typing Effect
   useEffect(() => {
     let currentText = '';
     let i = 0;
+    setTypedText(''); // reset when subtitle changes
     const timer = setInterval(() => {
       if (i < subtitle.length) {
         currentText += subtitle.charAt(i);
