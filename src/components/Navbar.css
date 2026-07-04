@@ -17,6 +17,11 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
+.navbar.hidden {
+  transform: translateY(-100%);
+  box-shadow: none;
+}
+
 .nav-container {
   display: flex;
   justify-content: space-between;
