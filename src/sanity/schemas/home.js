@@ -2,37 +2,97 @@ export default {
   name: 'home',
   title: 'Página de Inicio',
   type: 'document',
+  groups: [
+    { name: 'navigation', title: 'Navegación & Menú' },
+    { name: 'hero', title: 'Sección Principal (Hero)' },
+    { name: 'about', title: 'Nosotros & Misión' },
+    { name: 'services', title: 'Servicios' },
+    { name: 'contact', title: 'Contacto & CTA' },
+  ],
   fields: [
+    // --- NAVEGACIÓN ---
+    {
+      name: 'navItems',
+      title: 'Pestañas del Menú Superior',
+      description: 'Crea, oculta o reordena los enlaces del menú principal.',
+      type: 'array',
+      group: 'navigation',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            { name: 'label', title: 'Nombre de la Pestaña', type: 'string' },
+            { name: 'url', title: 'Enlace (ej: /servicios o /)', type: 'string' },
+            { name: 'isVisible', title: '¿Mostrar en la web?', type: 'boolean', initialValue: true },
+            { name: 'isPronto', title: '¿Mostrar etiqueta "PRONTO"?', type: 'boolean', initialValue: false },
+            {
+              name: 'dropdownItems',
+              title: 'Submenú (Elementos Desplegables)',
+              description: 'Opcional. Si agregas elementos aquí, esta pestaña tendrá una flecha desplegable.',
+              type: 'array',
+              of: [
+                {
+                  type: 'object',
+                  fields: [
+                    { name: 'label', title: 'Nombre', type: 'string' },
+                    { name: 'url', title: 'Enlace (ej: /servicios#service-0)', type: 'string' }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: 'navCtaText',
+      title: 'Texto del Botón Superior',
+      type: 'string',
+      group: 'navigation',
+      initialValue: 'Cotizar Gratis',
+    },
+    
+    // --- HERO ---
     {
       name: 'heroTitle',
-      title: 'Título Principal (Hero)',
+      title: 'Título Principal',
       type: 'string',
+      group: 'hero',
     },
     {
       name: 'heroSubtitle',
       title: 'Subtítulo (Efecto Máquina de Escribir)',
       type: 'string',
+      group: 'hero',
     },
+
+    // --- ABOUT ---
     {
       name: 'aboutMission',
       title: 'Nuestra Misión',
       type: 'text',
+      group: 'about',
     },
     {
       name: 'aboutVision',
       title: 'Nuestra Visión',
       type: 'text',
+      group: 'about',
     },
     {
       name: 'aboutImage',
       title: 'Imagen de Nosotros',
       type: 'image',
+      group: 'about',
       options: { hotspot: true }
     },
+
+    // --- SERVICES ---
     {
       name: 'servicesList',
       title: 'Lista de Servicios',
       type: 'array',
+      group: 'services',
       of: [
         {
           type: 'object',
@@ -44,20 +104,25 @@ export default {
         }
       ]
     },
+
+    // --- CONTACT ---
     {
       name: 'contactTitle',
       title: 'Título de Contacto',
       type: 'string',
+      group: 'contact',
     },
     {
       name: 'contactDescription',
       title: 'Descripción de Contacto',
       type: 'text',
+      group: 'contact',
     },
     {
       name: 'whatsappNumber',
       title: 'Número de WhatsApp',
       type: 'string',
+      group: 'contact',
     }
   ]
 }
