@@ -1,17 +1,53 @@
 <!doctype html>
-<html lang="en">
+<!-- Corrección Accesibilidad: Idioma declarado correctamente para evitar penalizaciones de lectores de pantalla -->
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ayni-brava</title>
+    
+    <!-- Corrección SEO: Título descriptivo y Meta Descripción -->
+    <title>Ayni Brava | Inteligencia Artificial y Desarrollo Web en Cusco</title>
+    <meta name="description" content="Agencia tecnológica especializada en Inteligencia Artificial, desarrollo de sistemas web y automatización para negocios en Cusco y Chumbivilcas. Protegemos tu capital y optimizamos tu tiempo." />
+    
+    <!-- Corrección Redes Sociales (Open Graph): Para que se vea profesional al compartir en WhatsApp/Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ayni Brava | Tecnología e IA en Cusco" />
+    <meta property="og:description" content="Agencia tecnológica especializada en Inteligencia Artificial y sistemas web en Cusco." />
+    <meta property="og:url" content="https://ayni-brava.com/" />
+    <meta property="og:image" content="/logo.png" />
+
+    <!-- Estilos Inline para el Pre-loader (Corrección SPA: Evita pantalla blanca) -->
+    <!-- Se incluye directamente aquí para que cargue instantáneamente antes que cualquier otro archivo -->
+    <style>
+      body { margin: 0; background-color: #FAFAFA; }
+      #initial-loader {
+        position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+        display: flex; flex-direction: column; justify-content: center; align-items: center;
+        background-color: #FAFAFA; z-index: 9999; font-family: sans-serif;
+      }
+      .spinner {
+        width: 40px; height: 40px; border: 3px solid rgba(17, 26, 70, 0.1);
+        border-radius: 50%; border-top-color: #111A46;
+        animation: spin 1s ease-in-out infinite; margin-bottom: 20px;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      .loader-text { color: #111A46; font-size: 14px; font-weight: 500; letter-spacing: 1px; }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Pre-loader: Esto es lo primero que ve el usuario, desaparece automáticamente cuando React carga -->
+      <div id="initial-loader">
+        <div class="spinner"></div>
+        <div class="loader-text">CARGANDO AYNI BRAVA...</div>
+      </div>
+    </div>
     
-    <!-- Hidden form to help Netlify bots detect the React form -->
-    <form name="whatsapp-leads" data-netlify="true" hidden>
-      <input type="tel" name="whatsapp" />
+    <!-- Corrección Accesibilidad: Formulario oculto con aria-label para evitar penalizaciones -->
+    <form name="whatsapp-leads" data-netlify="true" hidden aria-hidden="true">
+      <label for="whatsapp-hidden-input" style="display:none;">WhatsApp Número</label>
+      <input type="tel" id="whatsapp-hidden-input" name="whatsapp" aria-label="Número de WhatsApp para contacto" />
     </form>
     
     <script type="module" src="/src/main.jsx"></script>
