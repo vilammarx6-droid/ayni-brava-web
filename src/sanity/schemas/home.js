@@ -51,6 +51,9 @@ export default {
       of: [
         {
           type: 'object',
+          preview: {
+            select: { title: 'label', subtitle: 'url' }
+          },
           fields: [
             { name: 'label', title: 'Nombre de la Pestaña', type: 'string' },
             { name: 'url', title: 'Enlace (ej: /servicios o /)', type: 'string' },
@@ -64,6 +67,9 @@ export default {
               of: [
                 {
                   type: 'object',
+                  preview: {
+                    select: { title: 'label', subtitle: 'url' }
+                  },
                   fields: [
                     { name: 'label', title: 'Nombre', type: 'string' },
                     { name: 'url', title: 'Enlace (ej: /servicios#service-0)', type: 'string' }
@@ -127,6 +133,9 @@ export default {
       of: [
         {
           type: 'object',
+          preview: {
+            select: { title: 'title', subtitle: 'description' }
+          },
           fields: [
             { name: 'title', title: 'Título del Servicio', type: 'string' },
             { name: 'description', title: 'Descripción', type: 'text' },
