@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 export const client = createClient({
   projectId: 'ik88lryr',
   dataset: 'production',
-  useCdn: true, // true for fast edge caching
+  useCdn: false, // disabled for instant updates
   apiVersion: '2024-01-01', 
 })
 
