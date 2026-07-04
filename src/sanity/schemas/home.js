@@ -2,6 +2,37 @@ export default {
   name: 'home',
   title: 'Página de Inicio',
   type: 'document',
+  initialValue: {
+    navItems: [
+      {
+        label: '¿Qué Hacemos?',
+        url: '/servicios',
+        isVisible: true,
+        isPronto: false,
+        dropdownItems: [
+          { label: 'Webs Corporativas', url: '/servicios#service-0' },
+          { label: 'Tiendas Online', url: '/servicios#service-1' },
+          { label: 'Sistemas de Reserva', url: '/servicios#service-2' },
+          { label: 'SEO Local', url: '/servicios#service-3' },
+          { label: 'Misión y Visión', url: '/nosotros' }
+        ]
+      },
+      { label: 'Agencia de IA', url: '/nosotros', isVisible: true, isPronto: true },
+      { label: 'Blog', url: '/', isVisible: true, isPronto: true }
+    ],
+    navCtaText: 'Cotizar Gratis',
+    servicesList: [
+      { title: 'Webs Corporativas y Landing Pages', description: 'Diseñamos sitios profesionales y de alta conversión que proyectan autoridad y captan clientes potenciales de forma automatizada.', icon: '🌐' },
+      { title: 'Tiendas Online (E-commerce)', description: 'Catálogos digitales autoadministrables con carritos de compra y pasarelas de pago listas para vender tus productos 24/7.', icon: '🛒' },
+      { title: 'Sistemas de Reserva Automáticos', description: 'Perfecto para turismo y hoteles. Sistemas que sincronizan disponibilidad y pagos sin intervención humana.', icon: '📅' },
+      { title: 'Diseño Responsivo y SEO Local', description: 'Webs ultra rápidas en celulares y optimizadas a nivel de código para aparecer primero en Google Maps y búsquedas locales.', icon: '📍' },
+      { title: 'Automatización WhatsApp + IA', description: 'Conectamos tu web a herramientas de inteligencia artificial para responder consultas y agendar clientes vía WhatsApp.', icon: '🤖' },
+      { title: 'Mantenimiento y Soporte Técnico', description: 'Nos encargamos de los servidores, copias de seguridad y actualizaciones para que tu tecnología nunca se detenga.', icon: '🔧' }
+    ],
+    aboutVision: 'Ser el ecosistema referente en descentralización tecnológica y optimización del trabajo en zonas rurales. Logramos que la Inteligencia Artificial sea una herramienta accesible, económica y funcional que opere incluso sin conexión a internet para eliminar las brechas de conectividad.',
+    contactTitle: '¿Listo para optimizar tu negocio?',
+    contactDescription: 'Brindamos consultoría técnica gratuita para evaluar la situación digital de tu negocio en Chumbivilcas y Cusco. Habla directamente con nosotros y descubre cómo podemos proteger tu capital.',
+  },
   groups: [
     { name: 'navigation', title: 'Navegación & Menú' },
     { name: 'hero', title: 'Sección Principal (Hero)' },
