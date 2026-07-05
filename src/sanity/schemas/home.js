@@ -38,6 +38,8 @@ export default {
     aboutVision: 'Soñamos con un ecosistema donde la tecnología avanzada no sea un lujo exclusivo de las grandes ciudades. Queremos potenciar el talento de nuestras zonas rurales y lograr que la Inteligencia Artificial sea una herramienta del día a día: cercana, accesible y económica para tu negocio. Creemos en eliminar las brechas tecnológicas, creando soluciones hechas a medida que funcionen incluso sin internet, porque el desarrollo debe ser para todos, avanzando de socio a socio.',
     contactTitle: '¿Conversamos sobre el futuro de tu negocio?',
     contactDescription: 'Te ofrecemos una asesoría técnica gratuita y honesta, de socio a socio, para evaluar tu situación en Cusco o Chumbivilcas. Hablemos sin compromisos y descubramos juntos cómo la tecnología puede proteger tu capital.',
+    facebookUrl: '',
+    tiktokUrl: ''
   },
   groups: [
     { name: 'navigation', title: 'Navegación & Menú' },
@@ -168,6 +170,20 @@ export default {
       name: 'whatsappNumber',
       title: 'Número de WhatsApp',
       type: 'string',
+      group: 'contact',
+    },
+    {
+      name: 'facebookUrl',
+      title: 'Enlace de Facebook',
+      description: 'Pega aquí el enlace de tu página de Facebook. Déjalo en blanco si no quieres que aparezca el ícono.',
+      type: 'url',
+      group: 'contact',
+    },
+    {
+      name: 'tiktokUrl',
+      title: 'Enlace de TikTok',
+      description: 'Pega aquí el enlace de tu cuenta de TikTok. Déjalo en blanco si no quieres que aparezca el ícono.',
+      type: 'url',
       group: 'contact',
     }
   ]
