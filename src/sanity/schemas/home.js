@@ -46,6 +46,7 @@ export default {
     { name: 'hero', title: 'Sección Principal (Hero)' },
     { name: 'about', title: 'Nosotros & Misión' },
     { name: 'services', title: 'Servicios' },
+    { name: 'socialFeed', title: 'Publicaciones Destacadas' },
     { name: 'contact', title: 'Contacto & CTA' },
   ],
   fields: [
@@ -185,6 +186,27 @@ export default {
       description: 'Pega aquí el enlace de tu cuenta de TikTok. Déjalo en blanco si no quieres que aparezca el ícono.',
       type: 'url',
       group: 'contact',
+    },
+    {
+      name: 'latestTikTokUrl',
+      title: 'Enlace del Video de TikTok',
+      description: 'Pega el enlace completo de tu último video de TikTok para mostrarlo en la web. Ejemplo: https://www.tiktok.com/@ayniglobalsolutions/video/123456789',
+      type: 'url',
+      group: 'socialFeed',
+    },
+    {
+      name: 'latestFacebookUrl',
+      title: 'Enlace de la Publicación de Facebook',
+      description: 'Pega el enlace completo de tu última publicación de Facebook. Ejemplo: https://www.facebook.com/10000.../posts/12345...',
+      type: 'url',
+      group: 'socialFeed',
+    },
+    {
+      name: 'latestYoutubeUrl',
+      title: 'Enlace del Video de YouTube',
+      description: 'Pega el enlace de tu último video de YouTube. Ejemplo: https://www.youtube.com/watch?v=123456789',
+      type: 'url',
+      group: 'socialFeed',
     }
   ]
 }

@@ -3,6 +3,7 @@ import HeroSection from '../components/HeroSection';
 import ServicesSection from '../components/ServicesSection';
 import AboutSection from '../components/AboutSection';
 import ContactCTA from '../components/ContactCTA';
+import SocialFeed from '../components/SocialFeed';
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
           luego el usuario puede navegar a las versiones detalladas */}
       <ServicesSection />
       <ContactCTA />
+      <SocialFeed />
     </>
   );
 };
