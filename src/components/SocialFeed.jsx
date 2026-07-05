@@ -144,11 +144,11 @@ const SocialFeed = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <h3 className="social-card-title">👍 Último en Facebook</h3>
-              <div className="embed-container facebook-container">
+              <div className="embed-container facebook-container" style={{ display: 'flex', justifyContent: 'center', width: '100%', minHeight: '600px' }}>
                 <iframe 
-                  src={`https://www.facebook.com/plugins/post.php?href=${encodeURIComponent(facebookUrl)}&show_text=true&width=350`} 
-                  width="350" 
-                  height="400" 
+                  src={`https://www.facebook.com/plugins/post.php?href=${encodeURIComponent(facebookUrl)}&show_text=true&width=500`} 
+                  width="500" 
+                  height="650" 
                   style={{ border: 'none', overflow: 'hidden' }} 
                   scrolling="no" 
                   frameBorder="0" 
