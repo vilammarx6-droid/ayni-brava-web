@@ -8,9 +8,9 @@ import { urlFor } from '../sanity/image';
 
 const AboutSection = () => {
   const { data, loading } = useHomeData();
-  const mission = data?.aboutMission || homeDataBackup.about.mission;
-  const vision = data?.aboutVision || homeDataBackup.about.vision;
-  const imageUrl = data?.aboutImage ? urlFor(data.aboutImage).url() : homeDataBackup.about.image;
+  const mission = data?.aboutMission || homeDataBackup.aboutMission;
+  const vision = data?.aboutVision || homeDataBackup.aboutVision;
+  const imageUrl = data?.aboutImage ? urlFor(data.aboutImage).url() : (homeDataBackup.aboutImage || "/images/docente.jpeg");
 
   return (
     <section id="about" className="section">

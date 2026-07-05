@@ -17,7 +17,7 @@ const iconMap = {
 
 const ServicesSection = () => {
   const { data, loading } = useHomeData();
-  const servicesData = data?.servicesList?.length > 0 ? data.servicesList : homeDataBackup.services;
+  const servicesData = data?.servicesList?.length > 0 ? data.servicesList : (homeDataBackup.servicesList || []);
 
   return (
     <section id="services" className="section">
