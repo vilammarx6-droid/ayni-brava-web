@@ -197,7 +197,7 @@ export default {
     {
       name: 'latestFacebookUrl',
       title: 'Enlace de la Publicación de Facebook',
-      description: 'Pega el enlace completo de tu última publicación de Facebook. Ejemplo: https://www.facebook.com/10000.../posts/12345...',
+      description: 'Pega el enlace de la publicación. IMPORTANTE: Usa el link directo (ej. https://www.facebook.com/10000.../posts/12345...). NO uses links acortados como /share/p/... porque Facebook bloqueará la previsualización.',
       type: 'url',
       group: 'socialFeed',
     },

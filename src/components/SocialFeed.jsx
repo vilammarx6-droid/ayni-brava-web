@@ -11,6 +11,7 @@ const SocialFeed = () => {
   const youtubeUrl = data?.latestYoutubeUrl || homeDataBackup.latestYoutubeUrl;
 
   const [tiktokVideoId, setTiktokVideoId] = useState(null);
+  const [cleanTiktokUrl, setCleanTiktokUrl] = useState(null);
   const [youtubeVideoId, setYoutubeVideoId] = useState(null);
 
   useEffect(() => {
@@ -21,6 +22,7 @@ const SocialFeed = () => {
         // Handle URLs with query params
         const id = parts[1].split('?')[0];
         setTiktokVideoId(id);
+        setCleanTiktokUrl(`${parts[0]}/video/${id}`);
       }
     }
 
@@ -93,7 +95,7 @@ const SocialFeed = () => {
               <div className="embed-container tiktok-container">
                 <blockquote 
                   className="tiktok-embed" 
-                  cite={tiktokUrl} 
+                  cite={cleanTiktokUrl} 
                   data-video-id={tiktokVideoId} 
                   style={{ maxWidth: '605px', minWidth: '325px' }} 
                 >
