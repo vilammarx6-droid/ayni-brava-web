@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import FloatingAIBot from './components/FloatingAIBot';
 import Footer from './components/Footer';
 
 // Pages
@@ -21,6 +22,7 @@ function MainLayout({ children }) {
         {children}
       </main>
       <FloatingWhatsApp />
+      <FloatingAIBot />
       <Footer />
     </div>
   );
