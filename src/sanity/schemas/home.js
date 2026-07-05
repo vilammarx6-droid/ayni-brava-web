@@ -25,18 +25,19 @@ export default {
       { label: 'Agencia de IA', url: '/nosotros', isVisible: true, isPronto: true },
       { label: 'Blog', url: '/', isVisible: true, isPronto: true }
     ],
-    navCtaText: 'Cotizar Gratis',
+    navCtaText: 'Hablemos de tu proyecto',
     servicesList: [
-      { title: 'Webs Corporativas y Landing Pages', description: 'Diseñamos sitios profesionales y de alta conversión que proyectan autoridad y captan clientes potenciales de forma automatizada.', icon: '🌐' },
-      { title: 'Tiendas Online (E-commerce)', description: 'Catálogos digitales autoadministrables con carritos de compra y pasarelas de pago listas para vender tus productos 24/7.', icon: '🛒' },
-      { title: 'Sistemas de Reserva Automáticos', description: 'Perfecto para turismo y hoteles. Sistemas que sincronizan disponibilidad y pagos sin intervención humana.', icon: '📅' },
-      { title: 'Diseño Responsivo y SEO Local', description: 'Webs ultra rápidas en celulares y optimizadas a nivel de código para aparecer primero en Google Maps y búsquedas locales.', icon: '📍' },
-      { title: 'Automatización WhatsApp + IA', description: 'Conectamos tu web a herramientas de inteligencia artificial para responder consultas y agendar clientes vía WhatsApp.', icon: '🤖' },
-      { title: 'Mantenimiento y Soporte Técnico', description: 'Nos encargamos de los servidores, copias de seguridad y actualizaciones para que tu tecnología nunca se detenga.', icon: '🔧' }
+      { title: 'Webs Corporativas y Landing Pages', description: 'Tu presencia en internet, construida para transmitir confianza. Diseñamos páginas que muestran la verdadera autoridad de tu negocio y te ayudan a conseguir clientes todos los días.', icon: '🌐' },
+      { title: 'Tiendas Online (E-commerce)', description: 'Vende sin fronteras y sin estrés. Armamos tu tienda digital fácil de manejar, para que tú te enfoques en tu producto mientras el sistema atiende a tus clientes 24 horas al día.', icon: '🛒' },
+      { title: 'Sistemas de Reserva Automáticos', description: 'Orden y tranquilidad para tu hotel o agencia. Un asistente digital que organiza tus reservas y cobros automáticamente, ahorrándote dolores de cabeza y evitando cruces de horarios.', icon: '📅' },
+      { title: 'Diseño Responsivo y SEO Local', description: 'Haz que tus vecinos y turistas te encuentren primero. Tu web cargará al instante en cualquier celular y destacará en las búsquedas de Google en Cusco y Chumbivilcas.', icon: '📍' },
+      { title: 'Automatización WhatsApp + IA', description: 'Tu recepcionista virtual incansable. Usamos Inteligencia Artificial para responder rápido a tus clientes por WhatsApp, sin que tú tengas que estar pegado al teléfono todo el día.', icon: '🤖' },
+      { title: 'Mantenimiento y Soporte Técnico', description: 'Nosotros cuidamos la tecnología, tú cuidas tu negocio. Respaldamos tu información y mantenemos todo funcionando sin interrupciones. ¡Nuestro equipo es tu equipo!', icon: '🔧' }
     ],
-    aboutVision: 'Ser el ecosistema referente en descentralización tecnológica y optimización del trabajo en zonas rurales. Logramos que la Inteligencia Artificial sea una herramienta accesible, económica y funcional que opere incluso sin conexión a internet para eliminar las brechas de conectividad.',
-    contactTitle: '¿Listo para optimizar tu negocio?',
-    contactDescription: 'Brindamos consultoría técnica gratuita para evaluar la situación digital de tu negocio en Chumbivilcas y Cusco. Habla directamente con nosotros y descubre cómo podemos proteger tu capital.',
+    aboutMission: 'Acompañar a los empresarios y emprendedores de Cusco y Chumbivilcas en su evolución digital. No solo entregamos sistemas web; compartimos nuestro conocimiento técnico para proteger tu capital, optimizar tu tiempo y hacer que tu negocio compita al más alto nivel, siempre bajo el principio de reciprocidad y ayuda mutua.',
+    aboutVision: 'Soñamos con un ecosistema donde la tecnología avanzada no sea un lujo exclusivo de las grandes ciudades. Queremos potenciar el talento de nuestras zonas rurales y lograr que la Inteligencia Artificial sea una herramienta del día a día: cercana, accesible y económica para tu negocio. Creemos en eliminar las brechas tecnológicas, creando soluciones hechas a medida que funcionen incluso sin internet, porque el desarrollo debe ser para todos, avanzando de socio a socio.',
+    contactTitle: '¿Conversamos sobre el futuro de tu negocio?',
+    contactDescription: 'Te ofrecemos una asesoría técnica gratuita y honesta, de socio a socio, para evaluar tu situación en Cusco o Chumbivilcas. Hablemos sin compromisos y descubramos juntos cómo la tecnología puede proteger tu capital.',
   },
   groups: [
     { name: 'navigation', title: 'Navegación & Menú' },
