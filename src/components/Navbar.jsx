@@ -61,7 +61,11 @@ const Navbar = () => {
     }
   };
 
-  const navItems = data?.navItems?.length > 0 ? data.navItems : defaultNavData;
+  // Filter out items that are explicitly hidden or have no label
+  const validNavItems = data?.navItems?.filter(item => item.label && item.isVisible !== false) || [];
+  
+  // Use Sanity items only if there's at least one valid item, otherwise use defaults
+  const navItems = validNavItems.length > 0 ? validNavItems : defaultNavData;
   const ctaText = data?.navCtaText || 'Cotizar Gratis';
 
   return (
